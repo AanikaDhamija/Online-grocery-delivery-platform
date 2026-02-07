@@ -1,0 +1,44 @@
+/* frontend/src/STYLES/LoyaltyDashboard.css */
+.loyalty-dashboard {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+.points-overview-card {
+  background: #f1f8e9;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.points-balance {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #33691e;
+}
+.history-section h3 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.history-table th, .history-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.history-table th {
+  background-color: #f8f8f8;
+}
+.points-earned {
+  color: green;
+  font-weight: bold;
+}
+.points-spent {
+  color: red;
+  font-weight: bold;
+}

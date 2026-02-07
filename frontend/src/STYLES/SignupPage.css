@@ -1,0 +1,253 @@
+/* src/STYLES/SignupPage.css */
+
+/* Variables for theme colors */
+:root {
+    --primary-green: #22c55e;
+    --primary-green-dark: #16a34a;
+    --light-bg: #f0fdf4; /* A very light green tint for backgrounds */
+    --text-color-dark: #1f2937;
+    --text-color-medium: #4b5563;
+    --border-color: #d1d5db;
+    --focus-ring-color: rgba(34, 197, 94, 0.3); /* Softer focus ring */
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1); /* Lighter, more diffused shadow */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--light-bg);
+}
+
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Login Container - The main box for Signup */
+.login-container {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem; /* Balanced padding */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px var(--shadow-medium); /* Refined shadow */
+    position: relative;
+    width: 90%;
+    max-width: 380px; /* Slightly adjusted max-width for better proportions */
+    text-align: center;
+    animation: fadeInScale 0.3s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem; /* Consistent spacing */
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(10px); /* Subtle entry animation */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Close button - Adjusted for professional look */
+.login-close-btn {
+    position: absolute;
+    top: 0.75rem; /* Centered with smaller padding */
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.3rem; /* Slightly smaller for elegance */
+    color: var(--text-color-medium);
+    cursor: pointer;
+    padding: 0.25rem; /* Refined padding */
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 50%;
+    line-height: 1;
+}
+
+.login-close-btn:hover {
+    color: var(--primary-green-dark);
+    background-color: #f5f5f5; /* Light grey hover */
+}
+
+
+/* Header - Branding and Welcome messages */
+.login-header {
+    margin-bottom: 0.7rem; /* Balanced margin */
+}
+
+.login-header .flex {
+    margin-bottom: 0.8rem; /* Balanced margin */
+    align-items: center;
+    justify-content: center;
+}
+
+.login-title {
+    font-size: 1.9rem;
+    color: var(--primary-green-dark);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-top: 0.15rem; /* Fine-tuned alignment */
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+}
+
+.login-subtitle {
+    font-size: 0.88rem;
+    color: var(--text-color-medium);
+    margin-bottom: 0.6rem;
+}
+
+.login-welcome-message {
+    font-size: 0.95rem;
+    color: var(--text-color-dark);
+    font-weight: 500;
+}
+
+/* Form Styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem; /* Fine-tuned gap */
+    margin-bottom: 0.7rem;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-color-dark);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Consistent border radius */
+    font-size: 0.9rem;
+    color: var(--text-color-dark);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+    background-color: #fcfcfc;
+}
+
+.form-group input::placeholder {
+    color: var(--text-color-medium);
+    opacity: 0.5; /* Slightly lighter placeholder */
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px var(--focus-ring-color); /* Softer, more professional focus ring */
+}
+
+/* Primary Login Button */
+.primary-login-button {
+    width: 100%;
+    padding: 0.9rem; /* Slightly increased padding for better touch target */
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    margin-top: 0.9rem; /* Balanced margin */
+    box-shadow: 0 5px 10px rgba(34, 197, 94, 0.25); /* Professional button shadow */
+}
+
+.primary-login-button:hover {
+    background-color: var(--primary-green-dark);
+    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 6px 15px rgba(34, 197, 94, 0.35);
+}
+
+.primary-login-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(34, 197, 94, 0.2);
+}
+
+/* Sign up text */
+.signup-text {
+    font-size: 0.85rem;
+    color: var(--text-color-medium);
+    margin-top: 1.1rem; /* Balanced margin */
+}
+
+.signup-link {
+    color: var(--primary-green-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: text-decoration 0.2s ease;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  /* Add space on the right for the button */
+  padding-right: 2.5rem; 
+}
+
+.password-toggle-btn {
+  position: absolute;
+  /* Position button inside the input area */
+  right: 0.5rem; 
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  /* Medium-grey icon color */
+  color: #6b7280; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.password-toggle-btn:hover {
+  /* Light grey on hover */
+  background-color: #f3f4f6; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 1.2rem 1.5rem;
+        width: 85%;
+    }
+
+    .login-title {
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,143 @@
+/* SubscriptionFlow.css - styling for the subscription flow components */
+
+:root{
+  --green: #4CAF50;
+  --muted: #6b7280;
+  --card-bg: #fff;
+  --radius: 10px;
+}
+
+/* keep old sf- classes for configurator/modal backwards compatibility */
+.sf-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:3000;
+  padding:20px;
+  box-sizing:border-box;
+}
+
+.sf-card{width:100%;max-width:1000px;background:var(--card-bg);border-radius:var(--radius);box-shadow:0 12px 36px rgba(0,0,0,0.12);overflow:hidden;display:flex;flex-direction:column}
+.sf-header{display:flex;justify-content:space-between;align-items:center;padding:18px;border-bottom:1px solid #f3f4f6}
+.sf-close{background:transparent;border:0;font-size:20px;cursor:pointer}
+.sf-body{padding:18px;display:flex;gap:18px}
+.sf-left{flex:1}
+.sf-right{width:320px}
+
+.sf-section{background:#fff;border-radius:8px;padding:12px;border:1px solid #eee;margin-bottom:12px}
+.sf-items{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.sf-item{display:flex;justify-content:space-between;align-items:center;padding:8px}
+.sf-item-left{display:flex;flex-direction:column}
+.sf-item-name{font-weight:600}
+.sf-item-meta{color:var(--muted);font-size:13px}
+
+.qty-controls{display:flex;gap:8px;align-items:center}
+.qty-controls button{width:30px;height:30px;border-radius:6px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+.qty-controls input{width:56px;padding:6px;border-radius:6px;border:1px solid #e5e7eb;text-align:center}
+
+.sf-summary{margin-top:12px}
+.sf-row{display:flex;justify-content:space-between;padding:6px 0}
+.sf-row.total{font-weight:700;border-top:1px solid #f3f4f6;padding-top:8px;margin-top:8px}
+
+.sf-footer{display:flex;gap:8px;padding:12px;border-top:1px solid #f3f4f6;background:#fafafa;justify-content:flex-end}
+.sf-btn{background:var(--green);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer}
+.sf-secondary{background:#9ca3af}
+.sf-primary{background:var(--green)}
+
+.sub-trigger{padding:8px}
+.sub-trigger-btn{background:var(--green);color:#fff;padding:10px 16px;border-radius:8px;border:0;cursor:pointer}
+.sub-trigger-btn:disabled{opacity:0.5;cursor:not-allowed}
+
+/* Compact / cart-like configurator modal */
+.sf-overlay.compact{padding:12px}
+.sf-overlay.compact .sf-card{max-width:420px;border-radius:10px}
+.sf-overlay.compact .sf-body{display:block;padding:12px}
+.sf-overlay.compact .sf-section{margin-bottom:8px;padding:10px}
+.sf-overlay.compact .sf-plans{display:flex;gap:10px}
+.sf-overlay.compact .sf-plan{flex:1;padding:10px;border-radius:8px;border:1px solid #eef2f6;display:flex;flex-direction:column;align-items:flex-start}
+.sf-overlay.compact .sf-plan input{margin-right:8px}
+.sf-overlay.compact .sf-close{font-size:18px}
+.sf-overlay.compact .sf-btn{padding:8px 12px;border-radius:8px}
+.sf-overlay.compact h2{font-size:16px;margin:0}
+.sf-overlay.compact .sd-note{font-size:13px;color:var(--muted)}
+
+/* New: styles for sd- prefixed dashboard (main dashboard UI) */
+.sd-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:3000;
+  padding:24px;
+  box-sizing:border-box;
+}
+
+.sd-card{
+  width:100%;
+  max-width:1100px;
+  background:var(--card-bg);
+  border-radius:12px;
+  box-shadow:0 18px 40px rgba(2,6,23,0.18);
+  overflow:hidden;
+  display:grid;
+  grid-template-columns: 1fr 320px;
+  gap:20px;
+  align-items:start;
+}
+
+.sd-header{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid #f3f4f6;background:linear-gradient(90deg, rgba(76,175,80,0.06), transparent)}
+.sd-close{background:transparent;border:0;font-size:20px;cursor:pointer}
+
+.sd-left{padding:18px}
+.sd-right{padding:18px;border-left:1px solid #f3f4f6;background:#fbfcfd}
+
+.sd-card-inner{background:#fff;border-radius:10px;padding:14px;border:1px solid #eef2f6;margin-bottom:16px}
+.sd-details .sd-status-row{display:flex;gap:12px;align-items:center}
+.sd-status-dot{display:inline-block;width:12px;height:12px;border-radius:50%}
+.sd-status-dot.sd-green{background:var(--green)}
+.sd-status-dot.sd-amber{background:#f59e0b}
+.sd-status-dot.sd-gray{background:#9ca3af}
+.sd-small{color:var(--muted);font-size:12px}
+.sd-strong{font-weight:700}
+
+.sd-items-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.sd-list{display:flex;flex-direction:column;gap:10px}
+.sd-list-row{display:flex;gap:12px;align-items:center;padding:10px;border-radius:8px;border:1px solid #f3f4f6}
+.sd-thumb{width:56px;height:56px;border-radius:8px;object-fit:cover}
+.sd-item-meta{flex:1}
+.sd-item-name{font-weight:600}
+.sd-item-price{color:var(--muted);font-size:13px}
+.sd-qty{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.sd-qty-controls{display:flex;align-items:center;gap:8px}
+.sd-qty-controls button{width:30px;height:30px;border-radius:6px;border:1px solid #e5e7eb;background:#fff;cursor:pointer}
+.sd-qty-controls input{width:56px;padding:6px;border-radius:6px;border:1px solid #e5e7eb;text-align:center}
+.sd-subtotal{color:var(--muted);font-size:13px}
+
+.sd-totals{padding-top:8px;border-top:1px dashed #edf2f7;margin-top:10px}
+.sd-totals div{display:flex;justify-content:space-between;padding:6px 0}
+.sd-savings{color:var(--green);font-weight:600;margin-top:8px}
+
+.sd-manage-actions{display:flex;flex-direction:column;gap:10px}
+.sd-btn{background:var(--green);color:#fff;border:0;padding:10px 12px;border-radius:8px;cursor:pointer}
+.sd-btn.sd-small{padding:6px 8px;font-size:13px}
+.sd-link{background:transparent;border:0;color:#ef4444;cursor:pointer}
+.sd-danger{color:#ef4444}
+.sd-note{color:var(--muted);font-size:13px;margin-top:12px}
+
+/* Footer area inside card (if any) */
+.sd-footer{grid-column:1/-1;padding:12px 20px;border-top:1px solid #f3f4f6;background:#fff;display:flex;justify-content:flex-end;gap:10px}
+
+/* small responsive tweaks */
+@media (max-width:900px){
+  .sd-card{grid-template-columns:1fr;max-width:760px}
+  .sd-right{border-left:0;border-top:1px solid #f3f4f6;padding-top:16px}
+}
+
+/* subtle interactive states */
+.sd-list-row:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(2,6,23,0.06);transition:all 0.18s ease}
+.sd-btn:hover{filter:brightness(.95);transition:filter 120ms}

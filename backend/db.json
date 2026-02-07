@@ -1,0 +1,48 @@
+{
+  "users": [],
+  "pointsHistory": [],
+  "addresses": [
+    {
+      "label": "Home",
+      "flat": "295",
+      "floor": "",
+      "area": "GM73+R4, Punjab, India",
+      "landmark": "",
+      "name": "Test",
+      "phone": "",
+      "pincode": "140402",
+      "locality": "Alampur",
+      "city": "Alampur",
+      "state": "Punjab",
+      "id": 1
+    },
+    {
+      "label": "Home",
+      "flat": "295",
+      "floor": "",
+      "area": "GM73+R4, Punjab, India",
+      "landmark": "",
+      "name": "Aa",
+      "phone": "",
+      "pincode": "140402",
+      "locality": "Alampur",
+      "city": "Alampur",
+      "state": "Punjab",
+      "id": 2
+    },
+    {
+      "label": "Work",
+      "flat": "22",
+      "floor": "",
+      "area": "GM73+R4, Punjab, India",
+      "landmark": "",
+      "name": "Test2",
+      "phone": "",
+      "pincode": "140402",
+      "locality": "Alampur",
+      "city": "Alampur",
+      "state": "Punjab",
+      "id": 3
+    }
+  ]
+}
